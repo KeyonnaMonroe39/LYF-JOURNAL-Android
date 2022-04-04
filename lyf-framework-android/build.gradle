@@ -32,7 +32,6 @@ android {
             manifestPlaceholders = [build_version: "${versionMajor}.${versionMinor}.${versionPatch}"]
             // test coverage
             testCoverageEnabled true
-            // debuggable
         }
         release {
             buildConfigField "boolean", "DEBUG_MODE", "false"
