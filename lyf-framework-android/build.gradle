@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'org.jetbrains.dokka'
 }
 
 android {
@@ -13,6 +16,9 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 31
+        versionCode code
+        // not set as String because versionName is not defined in buildTypes
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
 
         // test options
         testOptions.unitTests.includeAndroidResources = true
@@ -67,12 +73,8 @@ dependencies {
 
     // coroutines
     def coroutines = '1.6.0-native-mt'
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines") {
-        exclude group: 'org.jetbrains.kotlinx', module: 'kotlinx-coroutines-core-jvm'
-    }
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines") {
-        exclude group: 'org.jetbrains.kotlinx', module: 'kotlinx-coroutines-core-jvm'
-    }
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
 
     // unit tests
     testImplementation 'junit:junit:4.13.2'
