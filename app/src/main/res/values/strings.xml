@@ -1,3 +1,24 @@
 <resources>
+    <!-- general -->
     <string name="app_name">Lyf Journal</string>
+    <string name="no_items_to_display">No items to display.</string>
+
+    <!-- tabs -->
+    <string name="tab_home">Home</string>
+    <string name="tab_listen">Listen</string>
+    <string name="tab_blog">Blog</string>
+    <string name="tab_social">Social</string>
+
+    <!-- home -->
+
+
+    <!-- listen -->
+
+
+    <!-- blog -->
+    <string name="tip_of_the_day">Lyf Tip of the Day</string>
+
+    <!-- social -->
+
+
 </resources>

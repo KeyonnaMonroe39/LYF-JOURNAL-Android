@@ -3,7 +3,7 @@ package com.keyonnamonroe.lyfjournal.framework.android.constants
 import com.keyonnamonroe.lyfjournal.framework.android.BuildConfig
 
 /**
- * General constants.
+ * General constants for LYF framework.
  */
 object Constants {
     const val TAG = "LFY_Framework"

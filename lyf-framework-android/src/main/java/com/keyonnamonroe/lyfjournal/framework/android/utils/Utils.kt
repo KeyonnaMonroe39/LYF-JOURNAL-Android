@@ -48,8 +48,33 @@ internal object Utils {
             calStartDate.add(Calendar.MINUTE, timeDifference)
             return calStartDate.before(calEndDate)
         } catch (e: ParseException) {
+            e.printStackTrace()
             Logger.e(Constants.TAG, e.message, e)
         }
         return false
+    }
+
+    /**
+     * Method is used to sanitize urls.
+     *
+     * <p>Add `https` if omitted.</p>
+     *
+     * @param url String The url to sanitize.
+     * @return String The url with proper form.
+     */
+    fun sanitizeUrl(url: String): String {
+        return url.let {
+            if (!it.endsWith("/")) {
+                "$it/"
+            } else {
+                it
+            }
+        }.let {
+            if (it.startsWith("http://") || it.startsWith("https://")) {
+                it
+            } else {
+                "https://$it"
+            }
+        }
     }
 }

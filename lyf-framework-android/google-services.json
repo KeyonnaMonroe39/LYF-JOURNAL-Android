@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "642214873629",
+    "project_id": "lyf-matters-project",
+    "storage_bucket": "lyf-matters-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642214873629:android:ab88077f394ae8509f14f4",
+        "android_client_info": {
+          "package_name": "com.keyonnamonroe.lyfjournal.framework.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642214873629-hdom0fhabp40kf0skclj7fhnfrm651e2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2BBpMGuIjctHG_JOCtPUaEfk3I-L91vg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "642214873629-hdom0fhabp40kf0skclj7fhnfrm651e2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
