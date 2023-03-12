@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.keyonnamonroe.lyfjournal.android">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <queries>
+        <intent>
+            <action android:name="com.google.android.youtube.api.service.START" />
+        </intent>
+    </queries>
     <application
         android:name=".application.LyfJournalApplication"
         android:allowBackup="true"
@@ -10,14 +17,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LyfJournal">
-        <activity android:name=".activity.MainActivity"
-            android:exported="true">
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<!--        <activity android:name=".activity.YoutubeActivity"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN"/>-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER"/>-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
     </application>
 
 </manifest>
