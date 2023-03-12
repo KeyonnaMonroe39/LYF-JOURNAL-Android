@@ -1,4 +1,5 @@
 @file:Suppress("DEPRECATION")
+
 package com.keyonnamonroe.lyfjournal.framework.android.utils
 
 import android.content.Context
