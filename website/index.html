@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>International Affairs | Keyonna A. Monroe</title>
+    <meta
+      name="description"
+      content="Discover International Affairs by Keyonna A. Monroe — a premium cinematic novel experience. Pre-order now or read a free sample."
+    />
+    <meta property="og:title" content="International Affairs | Keyonna A. Monroe" />
+    <meta
+      property="og:description"
+      content="A moody, elegant story of power, intimacy, and consequence. Pre-order International Affairs today."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0d0d0d" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --deep-teal: #1a4d5e;
+        --teal-deep: #0f3340;
+        --warm-gold: #d4af37;
+        --soft-rose: #e8c4d4;
+        --bg-black-1: #0d0d0d;
+        --bg-black-2: #1a1a1a;
+        --text-offwhite: #f5f0eb;
+        --text-muted: #d9d2cb;
+
+        --overlay-dark: rgba(13, 13, 13, 0.66);
+        --overlay-mid: rgba(26, 26, 26, 0.78);
+        --gold-soft: rgba(212, 175, 55, 0.2);
+        --teal-soft: rgba(26, 77, 94, 0.34);
+        --white-soft: rgba(245, 240, 235, 0.12);
+
+        --font-display: "Cormorant Garamond", serif;
+        --font-body: "Libre Baskerville", serif;
+        --font-ui: "Montserrat", sans-serif;
+
+        --radius-md: 12px;
+        --radius-lg: 18px;
+        --max-width: 1120px;
+        --transition: 220ms ease;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        font-family: var(--font-body);
+        color: var(--text-offwhite);
+        background:
+          radial-gradient(circle at 15% 15%, var(--teal-soft), transparent 48%),
+          radial-gradient(circle at 80% 0%, var(--gold-soft), transparent 40%),
+          linear-gradient(160deg, var(--bg-black-1), var(--bg-black-2));
+        min-height: 100vh;
+        line-height: 1.65;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(var(--white-soft) 0.6px, transparent 0.6px);
+        background-size: 3px 3px;
+        opacity: 0.24;
+        mix-blend-mode: soft-light;
+        z-index: 1;
+      }
+
+
+      .skip-link {
+        position: absolute;
+        left: -999px;
+        top: 0;
+        font-family: var(--font-ui);
+        background: var(--warm-gold);
+        color: var(--bg-black-1);
+        padding: 0.6rem 0.8rem;
+        z-index: 10;
+      }
+
+      .skip-link:focus {
+        left: 0.5rem;
+        top: 0.5rem;
+      }
+
+      .page {
+        position: relative;
+        z-index: 2;
+      }
+
+      .section {
+        width: min(var(--max-width), calc(100% - 2rem));
+        margin-inline: auto;
+        padding: 4.2rem 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 0.65rem;
+        font-family: var(--font-ui);
+        text-transform: uppercase;
+        letter-spacing: 0.13em;
+        color: var(--soft-rose);
+        font-size: 0.75rem;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        line-height: 1.1;
+        font-family: var(--font-display);
+        color: var(--text-offwhite);
+      }
+
+      h1 { font-size: clamp(2.4rem, 7vw, 5rem); }
+      h2 { font-size: clamp(1.85rem, 4.4vw, 3rem); margin-bottom: 0.9rem; }
+
+      p {
+        margin: 0 0 1rem;
+        color: var(--text-muted);
+        max-width: 68ch;
+      }
+
+      .hero {
+        min-height: 84vh;
+        display: grid;
+        place-items: end start;
+        padding-top: 5.5rem;
+        padding-bottom: 6rem;
+      }
+
+      .hero__panel {
+        background: linear-gradient(160deg, var(--overlay-dark), var(--overlay-mid));
+        border: 1px solid var(--white-soft);
+        border-radius: var(--radius-lg);
+        backdrop-filter: blur(2px);
+        padding: clamp(1.4rem, 5vw, 2.8rem);
+        box-shadow: 0 0 0 1px var(--gold-soft), 0 28px 60px var(--overlay-dark);
+      }
+
+      .hero__title-accent {
+        color: var(--warm-gold);
+        display: block;
+      }
+
+      .hero__author {
+        margin-top: 0.65rem;
+        font-family: var(--font-ui);
+        color: var(--soft-rose);
+        text-transform: uppercase;
+        letter-spacing: 0.11em;
+        font-size: 0.79rem;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 1.6rem;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-family: var(--font-ui);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 0.76rem;
+        border-radius: 999px;
+        padding: 0.8rem 1.4rem;
+        border: 1px solid transparent;
+        transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+      }
+
+      .btn:focus-visible,
+      .input-wrap input:focus-visible {
+        outline: 2px solid var(--soft-rose);
+        outline-offset: 2px;
+      }
+
+      .btn--primary {
+        background: linear-gradient(130deg, var(--warm-gold), var(--soft-rose));
+        color: var(--bg-black-1);
+        box-shadow: 0 12px 24px var(--gold-soft);
+      }
+
+      .btn--secondary {
+        border-color: var(--teal-soft);
+        background: var(--overlay-mid);
+        color: var(--text-offwhite);
+      }
+
+      .btn:hover { transform: translateY(-2px); }
+
+      .grid {
+        display: grid;
+        gap: 1.35rem;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .card {
+        background: linear-gradient(170deg, var(--overlay-dark), var(--overlay-mid));
+        border: 1px solid var(--white-soft);
+        border-radius: var(--radius-md);
+        padding: 1.2rem;
+      }
+
+      .card h3 {
+        font-size: 1.35rem;
+        margin-bottom: 0.55rem;
+        color: var(--warm-gold);
+      }
+
+      .pullquote {
+        border-left: 3px solid var(--warm-gold);
+        padding-left: 1.2rem;
+        margin: 1rem 0;
+        font-family: var(--font-display);
+        font-size: clamp(1.35rem, 3.1vw, 2rem);
+        color: var(--text-offwhite);
+      }
+
+      .cta-band {
+        background: linear-gradient(130deg, var(--teal-deep), var(--deep-teal));
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--teal-soft);
+        padding: clamp(1.25rem, 3vw, 2rem);
+        box-shadow: 0 16px 44px var(--overlay-dark);
+      }
+
+      .newsletter {
+        display: grid;
+        gap: 0.8rem;
+        grid-template-columns: 1fr;
+        max-width: 520px;
+      }
+
+      .input-wrap {
+        display: flex;
+        background: var(--overlay-mid);
+        border: 1px solid var(--white-soft);
+        border-radius: 999px;
+        overflow: hidden;
+      }
+
+      .input-wrap input {
+        width: 100%;
+        border: 0;
+        background: transparent;
+        color: var(--text-offwhite);
+        font-family: var(--font-ui);
+        padding: 0.82rem 1rem;
+      }
+
+      .input-wrap input::placeholder { color: var(--text-muted); }
+
+      .input-wrap button {
+        border: 0;
+        background: var(--warm-gold);
+        color: var(--bg-black-1);
+        font-family: var(--font-ui);
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+        padding: 0 1rem;
+      }
+
+      footer {
+        border-top: 1px solid var(--white-soft);
+        margin-top: 2.25rem;
+        padding: 2rem 0 3rem;
+        color: var(--text-muted);
+        font-size: 0.92rem;
+      }
+
+      @media (max-width: 700px) {
+        .section { padding: 3.2rem 0; }
+        .hero { min-height: 74vh; }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <div class="page">
+      <main id="main">
+        <section class="section hero" id="hero" aria-labelledby="hero-title">
+          <div class="hero__panel">
+            <p class="eyebrow">A Novel by Keyonna A. Monroe</p>
+            <h1 id="hero-title">
+              International
+              <span class="hero__title-accent">Affairs</span>
+            </h1>
+            <p class="hero__author">Power. Desire. Consequence.</p>
+            <p>
+              In rooms where policy is written and reputations are made, one private decision threatens to become a public reckoning.
+            </p>
+            <div class="actions">
+              <a class="btn btn--primary" href="#preorder" aria-label="Pre-order International Affairs">Pre-order</a>
+              <a class="btn btn--secondary" href="#sample" aria-label="Read a free sample chapter">Free sample</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="book" aria-labelledby="book-title">
+          <p class="eyebrow">Synopsis</p>
+          <h2 id="book-title">The Book</h2>
+          <p>
+            International Affairs follows a high-stakes romance unfolding across diplomatic corridors, private estates, and late-night negotiations where every silence carries weight.
+          </p>
+          <p>
+            As ambition collides with intimacy, loyalties are tested and the personal becomes impossible to separate from the political.
+          </p>
+        </section>
+
+        <section class="section" id="experience" aria-labelledby="experience-title">
+          <p class="eyebrow">Experience</p>
+          <h2 id="experience-title">What Awaits</h2>
+          <div class="grid">
+            <article class="card">
+              <h3>Global Tension</h3>
+              <p>From embassy receptions to closed-door summits, the atmosphere is charged with elegance and risk.</p>
+            </article>
+            <article class="card">
+              <h3>Magnetic Leads</h3>
+              <p>Two formidable figures circle each other in a game of trust, strategy, and undeniable attraction.</p>
+            </article>
+            <article class="card">
+              <h3>Prestige Atmosphere</h3>
+              <p>Lavish settings and razor-sharp dialogue deliver a cinematic reading experience with emotional depth.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="quote" aria-labelledby="quote-title">
+          <p class="eyebrow">Pullquote</p>
+          <h2 id="quote-title">A Taste of the Tone</h2>
+          <blockquote class="pullquote">
+            “He spoke like treaties were foregone conclusions—until her silence changed the terms.”
+          </blockquote>
+        </section>
+
+        <section class="section" id="preorder" aria-labelledby="preorder-title">
+          <div class="cta-band">
+            <p class="eyebrow">Now Open</p>
+            <h2 id="preorder-title">Pre-Order International Affairs</h2>
+            <p>Reserve your copy now. Link destination can be switched to your live checkout in seconds.</p>
+            <div class="actions">
+              <a class="btn btn--primary" href="https://example.com/preorder" target="_blank" rel="noopener noreferrer">Pre-order now</a>
+              <a class="btn btn--secondary" href="#sample">Read sample (Ch. 1–3)</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="author" aria-labelledby="author-title">
+          <p class="eyebrow">Author</p>
+          <h2 id="author-title">Keyonna A. Monroe</h2>
+          <p>
+            Keyonna A. Monroe writes emotionally layered fiction shaped by power dynamics, intimacy, and unforgettable settings. International Affairs continues her signature blend of elegance and intensity.
+          </p>
+        </section>
+
+        <section class="section" id="sample" aria-labelledby="sample-title">
+          <p class="eyebrow">Newsletter & Sample</p>
+          <h2 id="sample-title">Get a Free Preview</h2>
+          <p>Join the list for launch updates and receive a free sample from chapters 1–3.</p>
+          <form class="newsletter" action="#" method="post">
+            <label for="email" class="eyebrow">Email Address</label>
+            <div class="input-wrap">
+              <input id="email" name="email" type="email" required placeholder="you@example.com" />
+              <button type="submit">Join</button>
+            </div>
+          </form>
+        </section>
+      </main>
+
+      <footer>
+        <section class="section" style="padding-top:0;padding-bottom:0;">
+          <p>© <span id="year"></span> Keyonna A. Monroe. All rights reserved.</p>
+          <p><a href="#hero" class="btn btn--secondary" style="padding:0.45rem 0.85rem;">Back to top</a></p>
+        </section>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
