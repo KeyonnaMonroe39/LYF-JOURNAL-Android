@@ -1,0 +1,11 @@
+import { ageBands, ctas, lessonFormats, lessons, selPillars } from '../data/content'
+import { Hero } from '../components/Hero'
+import { LessonPreviewCard, SELPillarCard } from '../components/Cards'
+import { SectionHeader } from '../components/SectionHeader'
+import { CTASection } from '../components/Sections'
+import { Card } from '../components/ui/card'
+import { SEO } from '../components/SEO'
+
+export function Curriculum() {
+  return <><SEO title="SEL Curriculum" /><Hero compact eyebrow="SEL Curriculum" title="A polished, practical SEL framework powered by stories, play, and reflection." primary={ctas.educatorPreview} secondary={ctas.parentList}><p>Curriculum pathways are designed for ages 5–12, with flexible story lessons, classroom activities, family tools, and future app-based interactions.</p></Hero><section className="py-16"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><SectionHeader eyebrow="Age bands" title="Developmentally aware pathways." /><div className="mt-10 grid gap-5 md:grid-cols-3">{ageBands.map((band) => <Card key={band.title} className={`${band.color} border-2`}><h3 className="font-heading text-2xl text-plum">{band.title}</h3><p className="mt-3 leading-7 text-ink/75">{band.focus}</p></Card>)}</div></div></section><section className="bg-white/55 py-16"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><SectionHeader eyebrow="Five pillars" title="A reusable SEL learning arc." /><div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-5">{selPillars.map((pillar) => <SELPillarCard key={pillar.title} pillar={pillar} />)}</div></div></section><section className="py-16"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><SectionHeader title="Formats for school, home, and future app modules" eyebrow="Flexible delivery" /><div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{lessonFormats.map((format) => <div key={format} className="rounded-3xl bg-white px-5 py-4 font-extrabold text-plum shadow-sm">{format}</div>)}</div><div className="mt-10"><LessonPreviewCard lesson={lessons[0]} /></div></div></section><CTASection title="Preview the lessons before you implement." primary={ctas.educatorPreview} secondary={ctas.parentList}>Educator and parent pathways can be connected to email signup, CRM, or protected download flows.</CTASection></>
+}
