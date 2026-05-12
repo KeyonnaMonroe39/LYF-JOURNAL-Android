@@ -22,7 +22,7 @@ TODO
 <a name="resources"></a>
 ## Resources
 
-TODO
+* Official LYF4Kids YouTube Channel: https://www.youtube.com/@Lyf4kids
 
 [table of contents](#table-of-contents)
 
